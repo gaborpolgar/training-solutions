@@ -5,22 +5,26 @@ public class Product {
     private String name;
     private int price;
 
-    public String getString() {
-        return String;
+    public Product (String name, int price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public String getName() {
+         return name;
     }
 
     public int getPrice() {
-        return price;
+        return this.price;
     }
 
-    public Product(String name, int price) {
+    public void increasePrice(int price){
+        this.price = this.price + price;
+        }
+
+        public void decreasePrice(int price){
+            this.price = this.price - price;
     }
-
-    public void increasePrice(int){
-        }
-
-        public void decreasePrice(int){
-        }
 
     }
 
