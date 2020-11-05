@@ -1,5 +1,8 @@
 package localvariables;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LocalVariablesMain {
 
     public static void main(String[] args) {
@@ -11,7 +14,6 @@ public class LocalVariablesMain {
         int k = i;
         String s = "Hello World";
         String t = s;
-
     }
 
     public void testMethod() {
