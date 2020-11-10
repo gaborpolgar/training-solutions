@@ -5,14 +5,16 @@ import java.util.List;
 
 public class Office {
 
-    ArrayList<MeetingRoom> meetingRooms = new List<>();
+    List<MeetingRoom> meetingRooms = new ArrayList<>();
 
     public void addMeetingRoom(MeetingRoom meetingRoom){
-
+    meetingRooms.add(meetingRoom);
     }
-
-    public void printNames(){
-    }
+//
+//    public void printNames(MeetingRoom meetingRoom){
+//        for (meetingRoom : meetingRooms) {
+//            printMeetingRoomsWithName(meetingRoom.getName());
+//    }
 
     public void printNamesReverse(){
 
@@ -27,6 +29,7 @@ public class Office {
     }
 
     public void printMeetingRoomsWithName(String name){
+        System.out.println(name);
 
     }
 

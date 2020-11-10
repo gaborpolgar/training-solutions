@@ -2,7 +2,7 @@ package week02;
 
 public class MeetingRoom {
 
-    private String name,
+    private String name;
     private int length;
     private int width;
 
