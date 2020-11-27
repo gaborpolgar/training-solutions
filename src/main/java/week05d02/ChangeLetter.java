@@ -9,19 +9,17 @@ public class ChangeLetter {
 
     private char [] vowels = {'a', 'e', 'i', 'o', 'u'};
     private int [] toStarChars;
-    private String resultString;
 
     String changeVowels(String text){
         System.out.println(text);
             for(int i = 0; i < text.length(); i++){
                 for (int j= 0; j < vowels.length; j++){
                     if (text.charAt(i) == vowels[j]){
-                       resultString = text.replace(text.charAt(i), '*');
+                       text = text.replace(text.charAt(i), '*');
 
                     }
             }
-
         }
-            return resultString;
+            return text;
     }
 }
