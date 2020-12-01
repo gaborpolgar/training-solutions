@@ -9,7 +9,7 @@ class ArrayHandlerTest {
         int [] ints = {1,2,3};
         ArrayHandler handler = new ArrayHandler();
     @Test
-    public void testing () {
+    public void testing1 () {
 
         Assert.assertEquals(true, handler.contains(ints, 2));
     }
