@@ -10,7 +10,8 @@ public class ArrayOfArraysMain {
         int [] [] multi = new int[size][size];
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                System.out.print(multi [i] [j] = i*j);
+                System.out.print(multi [i] [j] = (i+1)*(j+1));
+                System.out.print(" ");
             }
             System.out.println();
         }
