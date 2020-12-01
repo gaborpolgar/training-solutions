@@ -11,15 +11,15 @@ class StoreTest {
 
     @Test
      void testCategory(){
-        Product samsung = new Product("Samsung", "Monitor", 40000);
-        Product lg = new Product("LG", "Monitor", 35000);
-        Product verbatimSsd = new Product("verbatim", "SSD", 20000);
+        Product samsung = new Product("Samsung", Category.BAKEDGOODS, 40000);
+        Product lg = new Product("LG", Category.BAKEDGOODS, 35000);
+        Product verbatimSsd = new Product("verbatim", Category.DAIRY, 20000);
 
         List<Product> lists = Arrays.asList(samsung, lg, verbatimSsd);
 
         Store hardShop = new Store(lists);
 
-        assertEquals(2,hardShop.getProductByCategoryName("Monitor") );
+        assertEquals(2,hardShop.getProductByCategoryName(Category.BAKEDGOODS) );
 
 
     }

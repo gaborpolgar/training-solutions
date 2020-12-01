@@ -3,14 +3,11 @@ package week06d02;
 public class Product {
 
     private String name;
-    private String category;
+    public Category category;
     private int price;
 
-    public String getCategory() {
-        return category;
-    }
 
-    public Product(String name, String category, int price) {
+    public Product(String name, Category category, int price) {
         this.name = name;
         this.category = category;
         this.price = price;
