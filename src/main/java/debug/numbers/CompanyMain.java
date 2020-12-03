@@ -1,4 +1,4 @@
-package debug;
+package debug.numbers;
 
 import java.util.ArrayList;
 import java.util.List;

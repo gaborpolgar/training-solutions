@@ -1,4 +1,4 @@
-package debug;
+package debug.numbers;
 
 public class Employee {
 
