@@ -15,6 +15,11 @@ public class SocialNetwork {
         findByName(name).connectMember(findByName(anotherName));
     }
 
+    @Override
+    public String toString() {
+        return members.toString();
+    }
+
     public List<String> bidirectionalConnections() {
         List <String> connections = new ArrayList<>();
         for (Member member: members) {

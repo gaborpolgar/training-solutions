@@ -12,8 +12,27 @@ public class Member {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getName() +
+               " connections: ");
+        for (int i = 0; i < getConnections().size(); i++){
+            sb.append(getConnections().get(i).getName() + ", ");
+            }
+        return sb.toString();
+        }
+
     public String getName() {
         return name;
+    }
+
+    private List<String> connectedNames(){
+        List<String> connectedNames = new ArrayList<>();
+        for (Member member: connections){
+            connectedNames.add(member.getName());
+        }
+        return connectedNames;
     }
 
     public List<Member> getConnections(){
