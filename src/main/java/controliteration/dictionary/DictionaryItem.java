@@ -1,24 +1,26 @@
 package controliteration.dictionary;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DictionaryItem {
 
     private String word;
-    private List<String> translations;
+
+    private List<String> translations = new ArrayList<>();
 
     public DictionaryItem(String word, List<String> translations) {
         this.word = word;
-        this.translations = translations;
-    }
-    public void DictionaryItem (String word, List<String> translations){
-
+        addTranslations(translations);
     }
 
-    public void addTranslations(List<String> translations){
-
+    public void addTranslations(List<String> impossibleTranslations){
+        for (String newTranslation: impossibleTranslations) {
+                if (!translations.contains(newTranslation)){
+                    translations.add(newTranslation);
+        }
     }
-
+    }
 
     public String getWord() {
         return word;
