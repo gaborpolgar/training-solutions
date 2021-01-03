@@ -9,7 +9,6 @@ public class BusTimeTable {
 
     public BusTimeTable(List<SimpleTime> timeTable) {
         this.timeTable = timeTable;
-        Long.MIN_VALUE
     }
 
     public BusTimeTable(int firstHour, int lastHour, int everyMinute) {
