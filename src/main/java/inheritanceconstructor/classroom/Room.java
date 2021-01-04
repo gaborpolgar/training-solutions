@@ -1,4 +1,4 @@
-package constructoroverloading.classroom;
+package inheritanceconstructor.classroom;
 
 public class Room {
 
@@ -10,5 +10,11 @@ public class Room {
         this.capacity = capacity;
     }
 
+    public String getLocation() {
+        return location;
+    }
 
+    public int getCapacity() {
+        return capacity;
+    }
 }
