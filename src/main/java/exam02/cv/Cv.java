@@ -46,10 +46,10 @@ public class Cv {
         }
     }
 
-    public int findSkillLevelByName(String skill) throws SkillNotFoundException {
-        if (skills.isEmpty()){
+    public int findSkillLevelByName(String skill) {
+/*        if (skills.isEmpty()){
             throw new SkillNotFoundException();
-        }
+        }*/
 //        try (){
 //        } catch (){
 //            throw new SkillNotFoundException();
