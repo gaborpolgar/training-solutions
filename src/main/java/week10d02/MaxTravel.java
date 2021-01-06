@@ -8,7 +8,7 @@ import java.util.List;
 public class MaxTravel {
 
     public static void main(String[] args) {
-       System.out.println(new MaxTravel().getMaxIndex(new ArrayList<Integer>(List.of(11, 11, 4, 5, 11, 20, 20, 1, 2, 4, 11))));
+       System.out.println(new MaxTravel().getMaxIndex(new ArrayList<>(List.of(11, 11, 4, 5, 11, 20, 20, 1, 2, 4, 11))));
     }
 
     //private List<Integer> busStops = new ArrayList<>();
