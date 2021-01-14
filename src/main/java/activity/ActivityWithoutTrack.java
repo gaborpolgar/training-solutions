@@ -13,6 +13,7 @@ public class ActivityWithoutTrack implements Activity {
         return activityType;
     }
 
+    @Override
     public double getDistance() {
         return 0.0;
     }
