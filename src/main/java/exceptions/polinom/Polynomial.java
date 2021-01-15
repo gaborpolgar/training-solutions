@@ -1,4 +1,4 @@
-package exceptions;
+package exceptions.polinom;
 
 public class Polynomial {
 

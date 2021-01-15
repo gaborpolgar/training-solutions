@@ -1,5 +1,6 @@
-package exceptions;
+package exceptions.polinom;
 
+import exceptions.polinom.Polynomial;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
