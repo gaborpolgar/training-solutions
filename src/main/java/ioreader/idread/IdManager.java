@@ -1,4 +1,4 @@
-package idread;
+package ioreader.idread;
 
 import java.io.*;
 import java.nio.file.Path;
