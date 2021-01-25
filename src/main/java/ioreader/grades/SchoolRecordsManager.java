@@ -12,23 +12,35 @@ public class SchoolRecordsManager {
 
     private List<Student> students = new ArrayList<>();
 
-        public void readRecords(){
+        public void readRecords() {
             Path file = Path.of("\\grades.txt");
-            try (BufferedReader reader = Files.newBufferedReader(file)){
+            try (BufferedReader reader = Files.newBufferedReader(file)) {
                 String line;
-                while( (line = reader.readLine()) != null){
-                line = reader.readLine();
-                String [] temp = line.split(" ");
-                List<Integer> grades = new ArrayList<>();
+                while ((line = reader.readLine()) != null) {
+                    String[] temp = line.split(" ");
+                    List<Integer> grades = new ArrayList<>();
                     for (int i = 0; i < temp.length; i++) {
                         grades.add(Integer.parseInt(temp[i]));
                     }
-                    Student s = new Student (temp[0], grades);
+                    Student s = new Student(temp[0], grades);
                     students.add(s);
                 }
             } catch (IOException e) {
                 throw new IllegalStateException("Can't read file.", e);
             }
-
         }
-}
+
+            public double classAverage(){
+                double sum=0;
+                for(Student s: students){
+                    sum+=s.average();
+                }
+                return sum/students.size();
+
+            }
+
+
+            public List<Student> getStudents() {
+                return new ArrayList<>(students);
+            }
+        }

@@ -13,7 +13,7 @@ public class Student {
         this.grades = grades;
     }
 
-    public double getGradesAverage(){
+    public double average(){
         int sum = 0;
         for (int grade: grades) {
             sum += grade;
@@ -22,7 +22,7 @@ public class Student {
         return sum/amount;
     }
 
-    public boolean inTheAscendent(){
+    public boolean isIncreasing(){
         for (int i = 0; i < grades.size(); i++) {
             if (grades.get(i+1) >= grades.get(i)){
                 continue;
