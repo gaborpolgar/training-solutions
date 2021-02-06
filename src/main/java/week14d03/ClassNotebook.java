@@ -1,5 +1,6 @@
 package week14d03;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -16,9 +17,13 @@ public class ClassNotebook {
     }
 
     public List<Student> sortNotebook(){
-        Collections.sort(students);
-        students.stream().map(s -> s.getName()).forEach(System.out::print);
-        return students;
+        List<Student> result = new ArrayList<>(students);
+        Collections.sort(result);
+        return result;
+    }
+
+    public void addStudents(Student other){
+        students.add(other);
     }
 
 }
