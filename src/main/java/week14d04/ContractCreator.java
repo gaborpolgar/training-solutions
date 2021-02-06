@@ -7,13 +7,10 @@ public class ContractCreator {
     Contract template;
 
     public ContractCreator(String client, List<Integer> monthlyPrices) {
-    Contract template = new Contract();
-   template.setClient(client);
-    template.setMonthlyPrices(monthlyPrices);
+    template = new Contract(client, monthlyPrices);
     }
 
     public Contract create (String name){
-        ContractCreator contract = new ContractCreator(name, template.getMonthlyPrices());
-                return contract.template;
+        return new Contract(name, template.getMonthlyPrices());
     }
 }
