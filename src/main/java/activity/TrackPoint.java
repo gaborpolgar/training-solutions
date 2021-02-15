@@ -18,7 +18,7 @@ public class TrackPoint {
         return elevation;
     }
 
-    public double getDistanceFrom (@org.jetbrains.annotations.NotNull TrackPoint point){
+    public double getDistanceFrom(@org.jetbrains.annotations.NotNull TrackPoint point) {
         final int R = 6371; // Radius of the earth
 
         double latDistance = Math.toRadians(point.getCoordinate().getLatitude() - this.getCoordinate().getLatitude());
