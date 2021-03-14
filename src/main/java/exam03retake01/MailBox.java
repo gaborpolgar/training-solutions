@@ -9,14 +9,14 @@ public class MailBox {
 
     public List<Mail> findByCriteria(String criteria){
         List<Mail> result = new ArrayList<>();
-        if (criteria.contains("from:")){
+        if (criteria.startsWith("from:")){
             String [] parts = criteria.split(":");
             if (parts[1].contains("@")){
                 return search(parts[1]);
             } else{
                 return searchName(parts[1]);
             }
-        } else if (criteria.contains("to:")){
+        } else if (criteria.startsWith("to:")){
             String [] parts = criteria.split(":");
             if (parts[1].contains("@")){
                 return searchTo(parts[1]);
