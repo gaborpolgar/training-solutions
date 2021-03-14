@@ -1,23 +1,16 @@
 package activitytrackerdao;
 
-import arraylist.Books;
-import org.junit.jupiter.api.Test;
+import org.flywaydb.core.Flyway;
 import org.mariadb.jdbc.MariaDbDataSource;
 
-import javax.sql.DataSource;
-import javax.xml.crypto.Data;
-import java.sql.*;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ActivityTrackerMain {
 
     public static void main(String[] args) {
 
-
         MariaDbDataSource dataSource;
-
 
         try {
             dataSource = new MariaDbDataSource();
@@ -36,11 +29,15 @@ public class ActivityTrackerMain {
 //        activityDao.insertActivity(dataSource, activity1);
 //       activityDao.insertActivity(dataSource, activity2);
 
+        Flyway flyway = Flyway.configure().dataSource(dataSource).load();
+        flyway.clean();
+        flyway.migrate();
+
         ActivityDao activityDao = new ActivityDao(dataSource);
 
-        System.out.println(activityDao.selectById( 3));
-        System.out.println(activityDao.selectAllActivities());
-        System.out.println(activityDao.selectActivitiesByType(ActivityType.BIKING));
+//        System.out.println(activityDao.selectById( 3));
+//        System.out.println(activityDao.selectAllActivities());
+//        System.out.println(activityDao.selectActivitiesByType(ActivityType.BIKING));
 
 
     }
